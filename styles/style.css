@@ -133,3 +133,44 @@ hr{
 #bottom-section{
     margin-bottom: 28px;
 }
+
+/* For mobile devices */
+
+@media only screen and (max-width: 688px) {
+    .container{
+        width: 100%;
+    }
+    .players, .courses, .blogs{
+        grid-template-columns: 1fr;
+    }
+    .player{
+        justify-content: center;
+    }
+    .blogs, .courses{
+        justify-items: center;
+    }
+   
+    .blog{
+        flex-direction: column;
+        width: 252px;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+}
+
+/* For Tablat devices */
+
+@media only screen and (min-width:689px) and (max-width:991px) {
+    .container{
+        width: 90%;
+    }
+    .players, .courses, .blogs{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .blog{
+        flex-direction: column;
+        width: 252px;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+}
