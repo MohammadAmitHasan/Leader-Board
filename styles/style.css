@@ -6,6 +6,7 @@ body{
     background-color: #F3F1FF;
     font-family: 'Poppins', sans-serif;
 }
+
 main{
     display: flex;
     flex-direction: column;
@@ -21,6 +22,39 @@ main{
 hr{
     border: 1px solid #D1D1D1;
     margin-bottom: 27px;
+}
+
+/* navbar styles */
+nav{
+    height: 94px;
+    background-color: #562EFF;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.nav-items{
+    display: flex;
+    width: 930px;
+    height: 94px;
+    justify-content: space-between;
+}
+.nav-elements{
+    height: 94px;
+    display: flex;
+    align-items: center;
+}
+
+nav img{
+    height: 51px;
+}
+.icon{
+    margin-right: 16px;
+}
+.nav-elements a{
+    margin-left: 36px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
 }
 
 /* top player styles */
@@ -137,32 +171,56 @@ hr{
 /* For mobile devices */
 
 @media only screen and (max-width: 688px) {
+    body{
+        margin: 0;
+    }
+    .nav-items{
+        display: flex;
+        width: 100%;
+        height: 94px;
+        justify-content: space-around;
+    }
+    .hide{
+        display: none;
+    }
+    .show{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        width: 100%;
+    }
+
     .container{
         width: 100%;
     }
     .players, .courses, .blogs{
         grid-template-columns: 1fr;
     }
-    .player{
-        justify-content: center;
-    }
-    .blogs, .courses{
-        justify-items: center;
+    .blogs, .courses, .players{
+        margin-left: 20px;
     }
    
     .blog{
         flex-direction: column;
         width: 252px;
-        align-items: center;
         margin-bottom: 20px;
+    }
+    .blog-info{
+        margin-left:0;
     }
 }
 
 /* For Tablat devices */
 
 @media only screen and (min-width:689px) and (max-width:991px) {
+    .nav-items{
+        display: flex;
+        width: 100%;
+        height: 94px;
+        justify-content: space-around;
+    }
     .container{
         width: 90%;
+        margin: 0 auto;
     }
     .players, .courses, .blogs{
         grid-template-columns: repeat(2, 1fr);
